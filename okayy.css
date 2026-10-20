@@ -1,0 +1,250 @@
+
+/* =========================================
+   1. PAGE BACKGROUND
+========================================= */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    color: #172554;
+
+    /* UDD LOGO BACKGROUND */
+    background-color: #dce8ff;
+    background-image: url("UDDLOGO.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 500px;
+    background-attachment: fixed;
+}
+
+/* =========================================
+   2. MAIN TITLE
+========================================= */
+
+h1 {
+    text-align: center;
+    color: white;
+    background-color: #101c70;
+    padding: 22px;
+    border-radius: 12px;
+    margin: 0 0 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================
+   3. SECTION HEADINGS
+========================================= */
+
+h3 {
+    color: #101c70;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 12px 15px;
+    border-left: 5px solid #eab308;
+    border-radius: 6px;
+    margin-top: 30px;
+}
+
+/* =========================================
+   4. TASK DASHBOARD
+========================================= */
+
+.dashboard {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dashboard-card {
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.97);
+    border-radius: 12px;
+    border-top: 5px solid #101c70;
+    box-shadow: 0 4px 12px rgba(16, 28, 112, 0.15);
+}
+
+.dashboard-card h4 {
+    margin: 0 0 10px;
+}
+
+.dashboard-card p {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.dashboard-card.total {
+    border-top-color: #101c70;
+}
+
+.dashboard-card.pending {
+    border-top-color: #eab308;
+}
+
+.dashboard-card.progress {
+    border-top-color: #2563eb;
+}
+
+.dashboard-card.completed {
+    border-top-color: #16a34a;
+}
+
+/* =========================================
+   5. ADD TASK FORM
+========================================= */
+
+#taskForm {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.97);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(16, 28, 112, 0.18);
+}
+
+#taskForm div {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    color: #101c70;
+    font-weight: bold;
+}
+
+input,
+select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #b8c6df;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: white;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #101c70;
+    box-shadow: 0 0 5px rgba(16, 28, 112, 0.25);
+}
+
+/* =========================================
+   6. BUTTONS
+========================================= */
+
+button {
+    background-color: #101c70;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin: 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #3048b8;
+}
+
+#saveButton {
+    width: 100%;
+    padding: 13px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* =========================================
+   7. SEARCH AND STATUS FILTER
+========================================= */
+
+#searchTask {
+    width: 65%;
+    margin-bottom: 15px;
+}
+
+#filterStatus {
+    width: 30%;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   8. TASK LIST TABLE
+========================================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 12px rgba(16, 28, 112, 0.15);
+}
+
+th {
+    background-color: #101c70;
+    color: white;
+    padding: 13px;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid #dbe3f0;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #edf3ff;
+}
+
+tbody tr:hover {
+    background-color: #dbeafe;
+}
+
+/* =========================================
+   9. MOBILE RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+        background-size: 320px;
+        background-position: center center;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    #searchTask,
+    #filterStatus {
+        width: 100%;
+    }
+
+    #taskForm {
+        padding: 18px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 7px;
+    }
+}
+
